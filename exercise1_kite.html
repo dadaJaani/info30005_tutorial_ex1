@@ -9,5 +9,30 @@
 <div>
     <button id="style" onclick="js_new_style()">New style</button>
 </div>
+
+<script>
+
+    var button = document.getElementById("style");
+    var text = document.getElementById("text");
+
+    function js_new_style() {
+        if(button.innerText === "New style") {
+            console.log("new style");
+            button.innerText = "Previous style";
+            text.style.color = "blue";
+            text.style.fontFamily = "monospace";
+            text.style.fontSize = "large";
+        }
+        else if (button.innerText === "Previous style") {
+            console.log("reverted");
+            button.innerText = "New style";
+            text.style.color = "black";
+            text.style.fontFamily = "serif";
+            text.style.fontSize = "medium";
+        }
+    }
+
+</script>
+
 </body>
 </html>
